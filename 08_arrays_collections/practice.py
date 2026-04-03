@@ -110,7 +110,7 @@ defaults = {
 }
 user_config = {
     "debug": True,
-    "database": {"name": "myapp_prod", "password": "secret"},
+    "database": {"name": "myapp_prod", "db_pass": "secret"},
     "logging": {"level": "INFO"},
 }
 
@@ -118,7 +118,7 @@ merged = deep_merge(defaults, user_config)
 print(f"  debug              : {merged['debug']}")
 print(f"  database.host      : {merged['database']['host']}")    # kept from defaults
 print(f"  database.name      : {merged['database']['name']}")    # overridden
-print(f"  database.password  : {merged['database']['password']}") # new from user
+print(f"  database.db_pass    : {merged['database']['db_pass']}")  # new from user
 print(f"  cache.ttl          : {merged['cache']['ttl']}")        # kept from defaults
 print(f"  logging.level      : {merged['logging']['level']}")    # new section
 

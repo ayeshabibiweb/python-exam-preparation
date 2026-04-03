@@ -48,10 +48,30 @@ python-exam-preparation/
 │   ├── practice.py
 │   └── key_points.md
 │
-├── 05_functions/                    ← (coming soon)
-├── 06_strings/                      ← (coming soon)
-├── 07_lists_tuples/                 ← (coming soon)
-├── 08_dictionaries_sets/            ← (coming soon)
+├── 05_functions_methods/            ← Functions & Methods
+│   ├── notes.md                     ← def, *args/**kwargs, decorators, closures
+│   ├── examples.py
+│   ├── practice.py
+│   └── key_points.md
+│
+├── 06_input_output_handling/        ← Input / Output Handling
+│   ├── notes.md                     ← print/input, formatting, file I/O, CSV/JSON
+│   ├── examples.py
+│   ├── practice.py
+│   └── key_points.md
+│
+├── 07_strings_text_processing/      ← Strings & Text Processing
+│   ├── notes.md                     ← slicing, string methods, regex (re module)
+│   ├── examples.py
+│   ├── practice.py
+│   └── key_points.md
+│
+├── 08_arrays_collections/           ← Arrays & Collections
+│   ├── notes.md                     ← list/tuple/set/dict, comprehensions
+│   ├── examples.py
+│   ├── practice.py
+│   └── key_points.md
+│
 ├── 09_oop_basics/                   ← (coming soon)
 ├── 10_oop_advanced/                 ← (coming soon)
 ├── 11_memory_management/            ← (coming soon)
@@ -130,10 +150,10 @@ The `STUDY_GUIDE.md` provides a structured plan that builds knowledge progressiv
 | 02 | Data Types & Variables | int, float, str, bool, None, scope, mutability |
 | 03 | Operators & Expressions | Arithmetic, comparison, logical, bitwise, precedence |
 | 04 | Control Structures | if/elif/else, for/while loops, break/continue |
-| 05 | Functions | def, parameters, return, scope, lambdas |
-| 06 | Strings | Slicing, methods, formatting, encoding |
-| 07 | Lists & Tuples | Indexing, slicing, methods, comprehensions |
-| 08 | Dictionaries & Sets | Key-value pairs, set operations, comprehensions |
+| 05 | Functions & Methods | def, *args/**kwargs, decorators, closures, recursion |
+| 06 | Input / Output Handling | print/input, f-strings, file I/O, CSV, JSON |
+| 07 | Strings & Text Processing | Slicing, methods, formatting, regex (re module) |
+| 08 | Arrays & Collections | list/tuple/set/dict, comprehensions, named tuples |
 | 09 | OOP Basics | Classes, objects, __init__, methods, attributes |
 | 10 | OOP Advanced | Inheritance, polymorphism, dunder methods |
 | 11 | Memory Management | References, garbage collection, id(), copying |
