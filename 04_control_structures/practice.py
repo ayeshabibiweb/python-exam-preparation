@@ -237,10 +237,12 @@ print(f"  Total: {total}, Terms: {terms}")
 print("\n--- Problem 10: Password Validator ---")
 
 # SOLUTION
-def assess_criteria(candidate):
+def assess_criteria(candidate: str) -> tuple:
     """
     Check a candidate string against multiple strength criteria.
-    Returns (is_valid: bool, messages: list[str])
+
+    Returns:
+        tuple[bool, list[str]]: (is_valid, list of failure messages)
     """
     SPECIAL_CHARS = set("!@#$%^&*")
     messages = []

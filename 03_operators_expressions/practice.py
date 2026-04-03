@@ -202,8 +202,9 @@ x -= 3;   print(f"  -= 3   → x = {x}")    # 38
 print("\n--- Problem 9: Password Validator ---")
 
 # SOLUTION
-def check_criteria(candidate):
-    """Return True if candidate meets the basic strength criteria."""
+def check_criteria(candidate: str) -> bool:
+    """Return True if candidate meets all criteria: length >= 8, contains a digit,
+    no leading or trailing spaces."""
     return (
         len(candidate) >= 8
         and any(c.isdigit() for c in candidate)
