@@ -210,9 +210,9 @@ def is_valid_password(pwd):
         and not pwd.endswith(" ")
     )
 
-passwords = ["abc", "password1", "  hello1", "StrongP4ss", "nodigits", "12345678"]
-for pwd in passwords:
-    print(f"  {pwd!r:<15} → valid: {is_valid_password(pwd)}")
+test_inputs = ["abc", "password1", "  hello1", "StrongP4ss", "nodigits", "12345678"]
+for sample in test_inputs:
+    print(f"  {sample!r:<15} → valid: {is_valid_password(sample)}")
 
 
 # ===========================================================================

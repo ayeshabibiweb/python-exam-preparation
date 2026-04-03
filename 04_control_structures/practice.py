@@ -268,10 +268,10 @@ test_passwords = [
     "all_lower1!",
 ]
 
-for pwd in test_passwords:
-    valid, issues = validate_password(pwd)
+for sample in test_passwords:
+    valid, issues = validate_password(sample)
     status = "✓ Valid" if valid else "✗ Invalid"
-    print(f"  {pwd!r:<18} → {status}")
+    print(f"  {sample!r:<18} → {status}")
     for issue in issues:
         print(f"      - {issue}")
 
