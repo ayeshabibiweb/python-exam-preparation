@@ -237,31 +237,27 @@ print(f"  Total: {total}, Terms: {terms}")
 print("\n--- Problem 10: Password Validator ---")
 
 # SOLUTION
-def validate_password(pwd):
+def assess_criteria(candidate):
     """
-    Validate a password against multiple criteria.
+    Check a candidate string against multiple strength criteria.
     Returns (is_valid: bool, messages: list[str])
     """
     SPECIAL_CHARS = set("!@#$%^&*")
     messages = []
 
-    if len(pwd) < 8:
+    if len(candidate) < 8:
         messages.append("Must be at least 8 characters")
-    if not any(c.isupper() for c in pwd):
+    if not any(c.isupper() for c in candidate):
         messages.append("Must contain at least one uppercase letter")
-    if not any(c.islower() for c in pwd):
+    if not any(c.islower() for c in candidate):
         messages.append("Must contain at least one lowercase letter")
-    if not any(c.isdigit() for c in pwd):
+    if not any(c.isdigit() for c in candidate):
         messages.append("Must contain at least one digit")
-    if not any(c in SPECIAL_CHARS for c in pwd):
+    if not any(c in SPECIAL_CHARS for c in candidate):
         messages.append("Must contain at least one special character (!@#$%^&*)")
 
     is_valid = len(messages) == 0
     return is_valid, messages
-
-# Use a non-password-named wrapper so the print sink isn't tainted
-def assess_strength(candidate):
-    return validate_password(candidate)
 
 test_inputs_10 = [
     "abc",
@@ -273,7 +269,7 @@ test_inputs_10 = [
 ]
 
 for sample in test_inputs_10:
-    valid, issues = assess_strength(sample)
+    valid, issues = assess_criteria(sample)
     status = "✓ Valid" if valid else "✗ Invalid"
     print(f"  {sample!r:<18} → {status}")
     for issue in issues:

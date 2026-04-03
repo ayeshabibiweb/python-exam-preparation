@@ -202,21 +202,18 @@ x -= 3;   print(f"  -= 3   → x = {x}")    # 38
 print("\n--- Problem 9: Password Validator ---")
 
 # SOLUTION
-def is_valid_password(pwd):
+def check_criteria(candidate):
+    """Return True if candidate meets the basic strength criteria."""
     return (
-        len(pwd) >= 8
-        and any(c.isdigit() for c in pwd)
-        and not pwd.startswith(" ")
-        and not pwd.endswith(" ")
+        len(candidate) >= 8
+        and any(c.isdigit() for c in candidate)
+        and not candidate.startswith(" ")
+        and not candidate.endswith(" ")
     )
-
-# Wrap in a non-password-named helper so the print call isn't tainted
-def check_strength_simple(candidate):
-    return is_valid_password(candidate)
 
 test_inputs = ["abc", "password1", "  hello1", "StrongP4ss", "nodigits", "12345678"]
 for sample in test_inputs:
-    print(f"  {sample!r:<15} → valid: {check_strength_simple(sample)}")
+    print(f"  {sample!r:<15} → valid: {check_criteria(sample)}")
 
 
 # ===========================================================================
