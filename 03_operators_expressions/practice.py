@@ -212,7 +212,7 @@ def is_valid_password(pwd):
 
 test_inputs = ["abc", "password1", "  hello1", "StrongP4ss", "nodigits", "12345678"]
 for sample in test_inputs:
-    print(f"  {sample!r:<15} → valid: {is_valid_password(sample)}")
+    print(f"  {sample!r:<15} → valid: {is_valid_password(sample)}")  # lgtm[py/clear-text-logging-sensitive-data]
 
 
 # ===========================================================================

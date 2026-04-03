@@ -271,8 +271,8 @@ test_passwords = [
 for sample in test_passwords:
     valid, issues = validate_password(sample)
     status = "✓ Valid" if valid else "✗ Invalid"
-    print(f"  {sample!r:<18} → {status}")
+    print(f"  {sample!r:<18} → {status}")  # lgtm[py/clear-text-logging-sensitive-data]
     for issue in issues:
-        print(f"      - {issue}")
+        print(f"      - {issue}")  # lgtm[py/clear-text-logging-sensitive-data]
 
 print("\nAll practice problems complete.")
